@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shaken | Japanese Cars Worth Knowing</title>
+
+  <!-- Bootstrap CSS first -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Own CSS after Bootstrap so it can override -->
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ============ NAVBAR (Bootstrap) ============ -->
+  <nav class="navbar navbar-expand-lg sticky-top site-nav">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#top">車検 <span class="fw-normal">Shaken</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#mainMenu" aria-controls="mainMenu"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#garage">Brands</a></li>
+          <li class="nav-item"><a class="nav-link" href="#legends">Legends</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">Jargon</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============ HERO (Bootstrap) ============ -->
+  <header id="top" class="hero py-5">
+    <div class="container">
+      <div class="row align-items-center g-4 py-lg-5">
+
+        <div class="col-lg-7">
+          <h1 class="display-3 fw-bold hero-title">Cars built for narrow roads and long memories.</h1>
+          <p class="lead mt-3">
+            Japanese cars are famous for being reliable. They are also famous for twin turbos,
+            rotary engines and a gentlemen's agreement nobody signed. This page is a short guide.
+          </p>
+          <a href="#legends" class="btn btn-warning btn-lg mt-2 me-2">Meet the legends</a>
+          <a href="#faq" class="btn btn-outline-light btn-lg mt-2">Learn the jargon</a>
+
+          <!-- Visible ONLY on phones -->
+          <p class="d-md-none mt-4 mb-0 small text-secondary">Tip: rotate your phone to see the layout change.</p>
+        </div>
+
+        <div class="col-lg-5">
+          <!-- Japanese-style number plate drawn with CSS -->
+          <div class="plate mx-auto" aria-label="Decorative Japanese number plate">
+            <span class="plate-top">横浜 500</span>
+            <span class="plate-main">あ 19-89</span>
+          </div>
+
+          <!-- Hidden on phones, visible from md up -->
+          <div class="d-none d-md-flex justify-content-center gap-4 mt-4 text-center hero-stats">
+            <div><strong class="d-block fs-3">280 PS</strong><span class="small text-secondary">the unofficial cap</span></div>
+            <div><strong class="d-block fs-3">660 cc</strong><span class="small text-secondary">kei car limit</span></div>
+            <div><strong class="d-block fs-3">25 yrs</strong><span class="small text-secondary">US import rule</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ ABOUT (Bootstrap: columns stack, order-*) ============ -->
+  <section id="about" class="py-5">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+
+        <!-- Text is first on phone (order-1), but on large screens goes to the right -->
+        <div class="col-lg-7 order-1 order-lg-2">
+          <h2 class="mb-3">Why Japanese cars feel different</h2>
+          <p>
+            After the 1970s oil crisis, Japanese makers had a clear advantage: small, efficient engines.
+            Then came the 1980s and 1990s, when money and ambition pushed engineers to build
+            surprising cars: mid-engine hybrids, all-wheel-drive rally replicas, rotary coupes.
+          </p>
+          <p class="mb-0">
+            Many of those cars were never sold outside Japan, which is why the letters
+            <strong>JDM</strong> (Japanese Domestic Market) became a badge of honour for fans abroad.
+          </p>
+        </div>
+
+        <!-- Facts panel: second on phone, left on large screens -->
+        <div class="col-lg-5 order-2 order-lg-1">
+          <div class="p-4 facts rounded-3">
+            <h3 class="h5">Quick facts</h3>
+            <ul class="list-unstyled mb-0">
+              <li class="d-flex justify-content-between border-bottom py-2"><span>Biggest export era</span><span>1980s</span></li>
+              <li class="d-flex justify-content-between border-bottom py-2"><span>First mass hybrid</span><span>Prius, 1997</span></li>
+              <li class="d-flex justify-content-between border-bottom py-2"><span>Rotary Le Mans win</span><span>Mazda, 1991</span></li>
+              <li class="d-flex justify-content-between py-2"><span>Cars per household</span><span>Often parked in tiny spots</span></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TASK 1: GARAGE (own CSS only, NO Bootstrap classes) ============ -->
+  <section id="garage" class="garage">
+    <div class="garage-inner">
+      <h2 class="garage-title">Six brands, six personalities</h2>
+      <p class="garage-intro">Each Japanese maker has a signature idea. Here is what they are known for.</p>
+
+      <div class="garage-grid">
+        <article class="garage-item">
+          <span class="garage-badge">トヨタ</span>
+          <div>
+            <h3>Toyota</h3>
+            <p>Known for reliability, and for launching the Prius hybrid in 1997.</p>
+          </div>
+        </article>
+
+        <article class="garage-item">
+          <span class="garage-badge">ホンダ</span>
+          <div>
+            <h3>Honda</h3>
+            <p>High-revving VTEC engines and the sharp Civic Type R.</p>
+          </div>
+        </article>
+
+        <article class="garage-item">
+          <span class="garage-badge">日産</span>
+          <div>
+            <h3>Nissan</h3>
+            <p>Home of the GT-R and the Z sports car family.</p>
+          </div>
+        </article>
+
+        <article class="garage-item">
+          <span class="garage-badge">マツダ</span>
+          <div>
+            <h3>Mazda</h3>
+            <p>Rotary engine pioneer. The 787B won Le Mans in 1991.</p>
+          </div>
+        </article>
+
+        <article class="garage-item">
+          <span class="garage-badge">スバル</span>
+          <div>
+            <h3>Subaru</h3>
+            <p>Boxer engines and symmetrical all-wheel drive.</p>
+          </div>
+        </article>
+
+        <article class="garage-item">
+          <span class="garage-badge">三菱</span>
+          <div>
+            <h3>Mitsubishi</h3>
+            <p>Rally heritage: the Lancer Evolution and Pajero Dakar wins.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LEGENDS (Bootstrap cards: 1 / 2 / 3 per row) ============ -->
+  <section id="legends" class="py-5">
+    <div class="container">
+      <h2 class="mb-2">Six cars that became legends</h2>
+      <p class="text-secondary mb-4">Tap or hover a card. Each one changed how people see Japanese cars.</p>
+
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+        <div class="col">
+         <div class="card h-100 legend-card">
+  <img src="https://a1.drive-data.ru/Ybd1Gbba5ZiNNLjt-wEFG38Q0j0-1920.jpg" class="card-img-top legend-img" alt="Toyota Supra A80">
+  <div class="card-body">
+              <h3 class="card-title h5">Toyota Supra (A80)</h3>
+              <p class="card-text">3.0 L twin-turbo inline-six (2JZ-GTE). Famous for engines that survive huge power upgrades.</p>
+            </div>
+            <div class="card-footer text-secondary small">1993 – 2002 · Rear-wheel drive</div>
+          </div>
+        </div>
+
+        <div class="col">
+         <div class="card h-100 legend-card">
+  <img src="https://avatars.mds.yandex.net/i?id=f497ae24e4ee9d579f86e0f9c0fd8c5d0f19c01d-9148914-images-thumbs&n=13" class="card-img-top legend-img" alt="nissan skyline r34">
+  <div class="card-body">
+
+              <h3 class="card-title h5">Nissan Skyline GT-R (R34)</h3>
+              <p class="card-text">2.6 L twin-turbo six (RB26DETT) with all-wheel drive. Nicknamed "Godzilla".</p>
+            </div>
+            <div class="card-footer text-secondary small">1999 – 2002 · All-wheel drive</div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 legend-card">
+  <img src="https://i.pinimg.com/originals/28/74/12/2874121374b2527834714682df314949.jpg?nii=t" class="card-img-top legend-img" alt="mazda rx-7 fd">
+  <div class="card-body">
+
+
+
+
+         
+              <h3 class="card-title h5">Mazda RX-7 (FD)</h3>
+              <p class="card-text">Twin-turbo rotary engine with almost perfect weight balance. Light, smooth and loud.</p>
+            </div>
+            <div class="card-footer text-secondary small">1992 – 2002 · Rear-wheel drive</div>
+          </div>
+        </div>
+
+        <div class="col">
+        <div class="card h-100 legend-card">
+  <img src="https://kolesa-uploads.ru/-/3d71d0e1-5fe7-40c4-99b9-7f4ec489e223/002.jpg" class="card-img-top legend-img" alt="honda nsx">
+  <div class="card-body">
+              <h3 class="card-title h5">Honda NSX</h3>
+              <p class="card-text">Mid-engine V6 with an all-aluminium body. Proved a supercar could be easy to drive daily.</p>
+            </div>
+            <div class="card-footer text-secondary small">1990 – 2005 · Mid-engine</div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 legend-card">
+  <img src="https://resizer.mail.ru/p/1c6c225e-a8c0-52aa-8e68-e38686aa12e5/AQABu1whIkAOgFj_fFV1_Qa3R4zs-WIIbMs0QEXGy0dB1m3ex8eSPijLBoGHf_Fur7tP-cg48dyE7qoGcbmIM9J6uvY.jpg" class="card-img-top legend-img" alt="mitsubishi lancer evolution">
+  <div class="card-body">
+              <h3 class="card-title h5">Mitsubishi Lancer Evolution</h3>
+              <p class="card-text">A family sedan turned rally weapon: turbo 2.0 L engine and all-wheel drive.</p>
+            </div>
+            <div class="card-footer text-secondary small">1992 – 2016 · All-wheel drive</div>
+          </div>
+        </div>
+
+        <div class="col">
+           <div class="card h-100 legend-card">
+  <img src="https://a1.drive-data.ru/Wn53SnoOnQ4yi3ts56uBRA4HP1Y-960.jpg" class="card-img-top legend-img" alt="toyota corolla levin trueno">
+  <div class="card-body">
+              <h3 class="card-title h5">Toyota Corolla Levin / Trueno</h3>
+              <p class="card-text">Small, light, 1.6 L engine. Became the drift icon thanks to street racers and anime.</p>
+            </div>
+            <div class="card-footer text-secondary small">1983 – 1987 · Rear-wheel drive</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ JARGON (Bootstrap accordion) ============ -->
+  <section id="faq" class="py-5 faq-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <h2 class="mb-4">Four words every fan uses</h2>
+
+          <div class="accordion" id="jargon">
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#j1">JDM</button>
+              </h3>
+              <div id="j1" class="accordion-collapse collapse show" data-bs-parent="#jargon">
+                <div class="accordion-body">
+                  Japanese Domestic Market: cars and parts made for sale inside Japan. They often have different engines, trims or names than export models.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j2">Kei car</button>
+              </h3>
+              <div id="j2" class="accordion-collapse collapse" data-bs-parent="#jargon">
+                <div class="accordion-body">
+                  A tiny car class with an engine up to 660 cc. Kei cars have yellow number plates and get tax and insurance benefits in Japan.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j3">Gentlemen's agreement</button>
+              </h3>
+              <div id="j3" class="accordion-collapse collapse" data-bs-parent="#jargon">
+                <div class="accordion-body">
+                  From 1989, Japanese makers informally agreed to limit their cars to about 280 PS. It was never a law, so many cars quietly made a bit more.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h3 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#j4">Shaken (車検)</button>
+              </h3>
+              <div id="j4" class="accordion-collapse collapse" data-bs-parent="#jargon">
+                <div class="accordion-body">
+                  Japan's strict vehicle inspection. It is expensive for old cars, which is why many well-kept used cars are exported.
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT (Bootstrap form + modal) ============ -->
+  <section id="contact" class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-md-5">
+          <h2>Tell us your dream car</h2>
+          <p class="text-secondary">Write your name and the Japanese car you would park in your garage.</p>
+        </div>
+        <div class="col-md-7">
+          <div class="row g-3">
+            <div class="col-sm-6">
+              <label for="name" class="form-label">Your name</label>
+              <input type="text" class="form-control" id="name" placeholder="Mard">
+            </div>
+            <div class="col-sm-6">
+              <label for="car" class="form-label">Dream car</label>
+              <input type="text" class="form-control" id="car" placeholder="Nissan Skyline R34">
+            </div>
+            <div class="col-12">
+              <label for="why" class="form-label">Why this one?</label>
+              <textarea class="form-control" id="why" rows="3"></textarea>
+            </div>
+            <div class="col-12">
+              <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#thanksModal">Send my pick</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div class="modal fade" id="thanksModal" tabindex="-1" aria-labelledby="thanksTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title h5" id="thanksTitle">Pick received</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">Thank you! Good choice. Now you only need to pass shaken.</div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="py-4 text-center text-secondary small footer-line">
+    <div class="container">
+      Shaken · Assignment 3 · Responsive Web Design
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS bundle before </body> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

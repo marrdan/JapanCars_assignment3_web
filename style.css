@@ -1,0 +1,160 @@
+/* =====================================================
+   Shaken: Japanese cars. Own styles (loaded after Bootstrap)
+   Palette:
+   asphalt  #15181c   page background
+   road     #1d2127   panels
+   kei      #f2c200   kei-car plate yellow (accent)
+   hinomaru #c8102e   Japanese red (details)
+   plate    #1f6b3d   green of Japanese plate text
+   ===================================================== */
+
+:root {
+  --asphalt: #15181c;
+  --road: #1d2127;
+  --kei: #f2c200;
+  --hinomaru: #c8102e;
+  --plate-green: #1f6b3d;
+}
+
+html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+body { background: var(--asphalt); overflow-x: hidden; }
+
+/* Override Bootstrap bits */
+.site-nav { background: rgba(21, 24, 28, 0.95); border-bottom: 3px solid var(--hinomaru); }
+.site-nav .navbar-brand { color: var(--kei); }
+.site-nav .nav-link:hover { color: var(--kei); }
+.btn-warning { background: var(--kei); border-color: var(--kei); }
+.facts { background: var(--road); border-left: 4px solid var(--hinomaru); }
+.faq-section { background: var(--road); }
+.footer-line { border-top: 1px solid #2c323a; }
+
+/* ---------- Hero ---------- */
+.hero { border-bottom: 1px solid #2c323a; }
+.hero-title { letter-spacing: -0.02em; }
+
+/* Japanese number plate made with CSS */
+.plate {
+  background: #fff;
+  color: var(--plate-green);
+  border: 4px solid var(--plate-green);
+  border-radius: 14px;
+  outline: 4px solid #fff;
+  width: 100%;
+  max-width: 360px;
+  padding: 0.75rem 1rem 1rem;
+  text-align: center;
+  font-weight: 700;
+  transform: rotate(-3deg);
+}
+.plate-top { display: block; font-size: 1.5rem; letter-spacing: 0.1em; }
+.plate-main { display: block; font-size: clamp(3rem, 14vw, 4.5rem); line-height: 1; letter-spacing: 0.04em; }
+
+/* ---------- Legend cards (colour blocks instead of photos) ---------- */
+.legend-card { background: var(--road); border-color: #2c323a; }
+.legend-top {
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.05em;
+}
+.legend-supra { background: linear-gradient(135deg, #7a1f2b, #2b1014); }
+.legend-gtr   { background: linear-gradient(135deg, #2d4a7a, #0f1a2e); }
+.legend-rx7   { background: linear-gradient(135deg, #a8481f, #2e150a); }
+.legend-nsx   { background: linear-gradient(135deg, #8a8f98, #2a2d33); }
+.legend-evo   { background: linear-gradient(135deg, #8a1c1c, #1f0b0b); }
+.legend-ae86  { background: linear-gradient(135deg, #e8e8e8 0%, #e8e8e8 50%, #1a1a1a 50%); color: #111; text-shadow: 0 0 8px #fff; }
+.legend-ae86 span { background: rgba(255, 255, 255, 0.75); padding: 0 0.5rem; border-radius: 6px; }
+
+/* =====================================================
+   TASK 1. Garage section (own CSS only, mobile-first)
+   Base styles = phone. Media queries only add changes.
+   ===================================================== */
+
+.garage {
+  background: var(--kei);
+  color: #15181c;
+  padding: 2.5rem 1rem;
+}
+
+.garage-inner { margin: 0 auto; max-width: 1200px; }
+
+.garage-title {
+  font-size: 1.75rem;
+  line-height: 1.15;
+  margin: 0 0 0.5rem;
+  text-align: center;
+}
+
+.garage-intro {
+  margin: 0 0 1.5rem;
+  text-align: center;
+}
+
+
+.legend-img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* Phone: 1 item per row */
+.garage-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: 1fr;
+}
+
+/* Phone: each item is a row (badge left, text right) */
+.garage-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+  background: #15181c;
+  color: #f5f5f5;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.garage-item h3 { font-size: 1.15rem; margin: 0 0 0.25rem; }
+.garage-item p  { font-size: 0.95rem; margin: 0; }
+
+.garage-badge {
+  flex: 0 0 auto;
+  background: var(--hinomaru);
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.5rem 0.6rem;
+  font-weight: 700;
+  font-size: 1rem;
+  min-width: 4.5rem;
+  text-align: center;
+}
+
+/* Tablet: 2 items per row, items become stacked cards,
+   bigger heading, left-aligned text, more spacing */
+@media (min-width: 768px) {
+  .garage { padding: 3.5rem 2rem; }
+  .garage-title { font-size: 2.25rem; text-align: left; }
+  .garage-intro { text-align: left; margin-bottom: 2rem; }
+  .garage-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .garage-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.25rem;
+  }
+}
+
+/* Laptop: 3 items per row, even bigger heading and spacing */
+@media (min-width: 1024px) {
+  .garage { padding: 4.5rem 2rem; }
+  .garage-title { font-size: 3rem; }
+  .garage-grid { grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+  .garage-item { padding: 1.75rem; }
+  .garage-item h3 { font-size: 1.4rem; }
+  .garage-badge { font-size: 1.25rem; padding: 0.6rem 0.9rem; }
+}
